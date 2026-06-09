@@ -1,5 +1,5 @@
 plugins {
-    id("java")
+    id("application")
     id("org.openjfx.javafxplugin") version "0.1.0"
 }
 
@@ -13,4 +13,8 @@ repositories {
 javafx {
     version = "25"
     modules = listOf("javafx.controls", "javafx.fxml")
+}
+
+application {
+    mainClass = "org.unibl.etf.Main"
 }

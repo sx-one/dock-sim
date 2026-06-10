@@ -3,10 +3,14 @@ package org.unibl.etf.model.ship.state.impl;
 import org.unibl.etf.model.ship.Cruiser;
 import org.unibl.etf.model.ship.state.CoastGuard;
 
+import java.io.Serial;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public final class GuardCruiser extends Cruiser implements CoastGuard {
+
+    @Serial
+    private static final long serialVersionUID = 1L;
 
     private boolean sirenOn;
     private final String pursuitFile;

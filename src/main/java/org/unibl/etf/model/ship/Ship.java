@@ -1,9 +1,14 @@
 package org.unibl.etf.model.ship;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public abstract class Ship {
+public abstract class Ship implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = 1L;
 
     private final String name, engineNumber, registrationNumber;
     private final int IMO;

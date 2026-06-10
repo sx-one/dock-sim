@@ -1,6 +1,12 @@
 package org.unibl.etf.model;
 
-public final class Terminal {
+import java.io.Serial;
+import java.io.Serializable;
+
+public final class Terminal implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = 1L;
 
     private static final int ROWS = 4;
 

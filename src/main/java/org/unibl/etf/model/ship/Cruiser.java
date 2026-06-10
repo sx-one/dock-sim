@@ -1,8 +1,12 @@
 package org.unibl.etf.model.ship;
 
+import java.io.Serial;
 import java.nio.file.Path;
 
 public class Cruiser extends Ship {
+
+    @Serial
+    private static final long serialVersionUID = 1L;
 
     private final int numPassengers;
 

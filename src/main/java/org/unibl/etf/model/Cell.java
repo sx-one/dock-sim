@@ -2,7 +2,13 @@ package org.unibl.etf.model;
 
 import org.unibl.etf.model.ship.Ship;
 
-public final class Cell {
+import java.io.Serial;
+import java.io.Serializable;
+
+public final class Cell implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = 1L;
 
     private Type type;
     private Ship occupant;

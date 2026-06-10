@@ -3,9 +3,13 @@ package org.unibl.etf.model.ship.state.impl;
 import org.unibl.etf.model.ship.Tanker;
 import org.unibl.etf.model.ship.state.Customs;
 
+import java.io.Serial;
 import java.nio.file.Path;
 
 public final class CustomsTanker extends Tanker implements Customs {
+
+    @Serial
+    private static final long serialVersionUID = 1L;
 
     private boolean sirenOn;
 

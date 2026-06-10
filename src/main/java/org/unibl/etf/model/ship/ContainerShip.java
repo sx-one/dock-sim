@@ -1,8 +1,12 @@
 package org.unibl.etf.model.ship;
 
+import java.io.Serial;
 import java.nio.file.Path;
 
 public class ContainerShip extends Ship {
+
+    @Serial
+    private static final long serialVersionUID = 1L;
 
     // TEU (Twenty-foot Equivalent Unit) - whole number of containers
     private final int capacity;

@@ -2,6 +2,7 @@ package org.unibl.etf.ui.viewmodel;
 
 import javafx.beans.property.*;
 import org.unibl.etf.model.Terminal;
+import org.unibl.etf.service.PortService;
 
 public final class AdminViewModel {
 
@@ -24,7 +25,12 @@ public final class AdminViewModel {
             new SimpleBooleanProperty(true);
 
     public void refresh() {
+        var portService = PortService.getInstance();
 
+        totalShipsProperty.setValue(portService.getTotalShipCount());
+        freeDocksProperty.setValue(portService.getTotalFreeDockCount());
+        totalDocksProperty.setValue(portService.getTotalDockCount());
+        totalStateShipsProperty.setValue(portService.getTotalStateShipCount());
     }
 
     public IntegerProperty totalShipsProperty() {

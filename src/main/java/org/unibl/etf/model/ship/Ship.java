@@ -1,19 +1,20 @@
 package org.unibl.etf.model.ship;
 
 import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public abstract class Ship {
 
     private final String name, engineNumber, registrationNumber;
     private final int IMO;
-    private final Path photoPath;
+    private final String photoPath;
 
     public Ship(String name, String engineNumber, String registrationNumber, int IMO, Path photoPath) {
         this.name = name;
         this.engineNumber = engineNumber;
         this.registrationNumber = registrationNumber;
         this.IMO = IMO;
-        this.photoPath = photoPath;
+        this.photoPath = photoPath.toString();
     }
 
     public String getName() {
@@ -33,6 +34,6 @@ public abstract class Ship {
     }
 
     public Path getPhotoPath() {
-        return photoPath;
+        return Paths.get(photoPath);
     }
 }

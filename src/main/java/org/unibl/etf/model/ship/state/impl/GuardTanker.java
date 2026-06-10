@@ -4,11 +4,12 @@ import org.unibl.etf.model.ship.Tanker;
 import org.unibl.etf.model.ship.state.CoastGuard;
 
 import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public final class GuardTanker extends Tanker implements CoastGuard {
 
     private boolean sirenOn;
-    private final Path pursuitFile;
+    private final String pursuitFile;
 
     public GuardTanker(
             String name, String engineNumber,
@@ -17,12 +18,12 @@ public final class GuardTanker extends Tanker implements CoastGuard {
             Path pursuitFile) {
 
         super(name, engineNumber, registrationNumber, IMO, photoPath, volume);
-        this.pursuitFile = pursuitFile;
+        this.pursuitFile = pursuitFile.toString();
     }
 
     @Override
     public Path getPursuitFile() {
-        return pursuitFile;
+        return Paths.get(pursuitFile);
     }
 
     @Override

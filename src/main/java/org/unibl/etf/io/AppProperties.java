@@ -16,7 +16,7 @@ public final class AppProperties {
     }
 
     private AppProperties() {
-        try(var inputStream = AppProperties.class.getResourceAsStream("/properties.yaml")) {
+        try(var inputStream = AppProperties.class.getResourceAsStream("/application.properties")) {
             var properties = new Properties();
 
             properties.load(inputStream);
